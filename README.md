@@ -3,7 +3,7 @@
 ### O que é
 O < Div >ersidade Tech é um programa de formação em análise de dados realizado pela empresa Suzano em parceria com a escola de tecnologia Let's Code from Ada.
 
-Esse projeto foi realizado na disciplina Lógica de Programação II pelas alunas [Talita Cavalcanti](https://github.com/talitacgs), [Celsina Azevedo](), [Carol Luz](https://github.com/CarolLuz).
+Esse projeto foi realizado na disciplina Lógica de Programação II pelas alunas [Talita Cavalcanti](https://github.com/talitacgs), [Celsina Azevedo](https://github.com/celsina), [Carol Luz](https://github.com/CarolLuz).
 ### Tecnologias utilizadas
 
 <div style="display: inline_block" align="center">
