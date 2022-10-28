@@ -3,7 +3,7 @@
 ### O que é
 O < Div >ersidade Tech é um programa de formação em análise de dados realizado pela empresa Suzano em parceria com a escola de tecnologia Let's Code from Ada.
 
-Esse projeto foi realizado na disciplina Lógica de Programação II pelas alunas Talita Cavalcanti, Celsina, Carol Luz.
+Esse projeto foi realizado na disciplina Lógica de Programação II pelas alunas [Talita Cavalcanti](https://github.com/talitacgs), [Celsina Azevedo](), [Carol Luz](https://github.com/CarolLuz).
 ### Tecnologias utilizadas
 
 <div style="display: inline_block" align="center">
@@ -16,7 +16,7 @@ Esse projeto foi realizado na disciplina Lógica de Programação II pelas aluna
 
 ### O Projeto
 
-O projeto deveria conter um menu principal com as seguintes opções:
+O projeto deve conter um menu principal com as seguintes opções:
 
 ```
 Boas vindas ao nosso sistema:
@@ -29,18 +29,18 @@ Boas vindas ao nosso sistema:
 6 - Sair
 ```
 
-E as alterações das informações deveriam ser salvas em um arquivo JSON. 
+E as alterações das informações devem ser salvas em um arquivo JSON. 
 
-Para inserir um usuário, apenas o nome era obrigatório e automaticamente deveria ser gerado um ID e um Status True, por padrão. Caso o usuário tente inserir um cadastro que já existe, mas está desativado (mesmo nome, telefone e endereço), o sistema deve apenas tornar o cadastro antigo True, e não criar um novo cadastro.
+Para inserir um usuário, apenas o nome era obrigatório e automaticamente deveria ser gerado um ID e um Status True, por padrão. Caso o usuário tente inserir um cadastro que já existe, mas está desativado (mesmo nome, telefone e endereço), o sistema deve apenas alterar o status do cadastro antigo para True, e não criar um novo cadastro.
 
-Para excluão de um usuário, utilizou-se da _Exclusão Lógica_,que em síntese muda o _status_ do usuário de *True* para *False*. Caso o ID digitado não esteja dentro da base, deve-se imprimir uma mensagem de erro e pedir novamente o ID. Exemplo:
+Para exclusão de um usuário, utilizou-se da _Exclusão Lógica_ que, em síntese, muda o _status_ do usuário de *True* para *False*. Caso o ID digitado não esteja dentro da base, deve-se imprimir uma mensagem de erro e pedir novamente o ID. Exemplo:
 ```
 Usuário não encontrado!
 
 Insira o ID do usuário:
 ```
 
-Para atualização de um usuário, deverá ser solicitado pedir o ID e imprimir uma mensagem caso não o encontra na base. Ao inseri um ID correto, deve-se imprimir o seguinte sub menu:
+Para atualização de um usuário, deve ser solicitado o ID e imprimir uma mensagem caso não o encontre na base. Ao inseri um ID correto, deve-se imprimir o seguinte sub menu:
 ```
 Qual informação deseja alterar?
 1 - Nome
@@ -80,3 +80,22 @@ Endereço: Rua Boa
 A opção de 5 deve imprimir na tela as informações de todos os usuários ativos e a opção Sair deverá encerrar o programa e salvar todas as alterações.
 
 ### Solução
+
+Para esse projeto foi utilizado a biblioteca json através de:
+
+```
+import json
+```
+E uma função para salvar as alterações no arquivo
+
+```
+def atualizarArquivo():
+    json_object = json.dumps(usuarios, indent=4)
+    with open("projetoModuloII.json", "w") as outfile:
+        outfile.write(json_object)
+    print('\nAlterações salvas com sucesso')
+```
+Para cada item do menu foi criada uma função específica, porém algumas delas precisavam chamar outras funções que retornavam, por exemplo, se o usuário estava ativo/inativo, alterava o Status para _true_ ou formata o texto para exibição.
+
+
+<font size="2"><p align="center"> Realizado: Out, 2022  </p></font>
